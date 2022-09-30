@@ -1,0 +1,204 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+
+
+{% block contenido %}
+
+
+<!--comienzo de galeria de fotos-->
+<div class="top3_wrapper">
+<div class="container">
+<div class="row">
+<div class="span12">
+<div class="top3">
+<div class="top3_inner clearfix">
+	
+<div id="slider_wrapper">
+	<div id="slider" class="clearfix">
+		<div id="camera_wrap">
+			{% for banda in fotos_bandas %}
+			<div data-src="{{ banda.url_foto }}">
+				<div class="camera_caption fadeIn">
+					<div class="txt1">{{ banda.nombre }} </div>								
+				</div>     
+			</div>
+			{% endfor %}
+		</div>	
+	</div>	
+	<img src="{% static 'web/images/kv1.png' %}" alt="" class="kv1">
+</div>
+
+</div>	
+</div>	
+</div>	
+</div>	
+</div>	
+</div>
+<!--fin de galeria de fotos-->
+
+
+<div id="content">
+<div class="container">
+<div class="row">
+<div class="span7">
+<div class="box1">
+<div class="box1_top">
+	<h2><span>Bienvenidos!!!</span></h2>
+</div>	
+<div class="box1_inner">	
+
+<div class="thumb1 last">
+	<div class="thumbnail clearfix">
+		<figure class=""><img src="{% static 'web/images/home01.jpg' %}" alt=""></figure>
+		<div class="caption">
+			<p>
+				<strong>Comemos cadenas y cagamos METAL</strong>
+			</p>
+			<p>
+				Bienvenidos a un sitio web puro de heavy metal argentino, aca podras encontrar bandas dentro del estilo que mas te gusta y te apasiona.
+				Descubri bandas del under, enterate de sus fechas, sus nuevos discos
+				y mas.
+			</p>
+			<div class="text-right"><a href="about" class="button1">Saber mas</a></div>
+		</div>
+	</div>
+</div>
+
+</div>
+</div>	
+</div>
+<div class="span4">
+	<div class="box1">
+	<div class="box1_top">
+		<h2><span>EVENTOS PROXIMOS</span></h2>
+	</div>
+		{% for evento in eventos %}	
+	<div class="box1_inner">
+		
+	<h4><a href="#">{{ evento.banda }}</a></h4>
+	
+	<div class="date1">{{ evento.fecha_evento }} - {{ evento.horario }} Hs</div>
+	<div class="date1">{{ evento.lugar }}</div>
+	<div class="date1">{{ evento.direccion }}</div>
+	
+	<p>
+		{{ evento.comentario }}
+	</p>
+	
+	<div class="line1"></div>
+	
+	
+	</div>
+		{% endfor %}
+			
+	</div>
+	<div class="text-right"><a href="eventos" class="button1">Mas eventos</a></div>	
+	</div>
+<!--comienzo reproductor
+<div class="span5">
+<div class="box1">
+<div class="box1_top">
+	<h2><span>Escuchalos</span></h2>
+</div>	
+<div class="box1_inner">
+	
+
+<div class="jplayer_inner">
+				<div class="jplayer">
+	<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+	<div id="jp_container_1" class="jp-audio">
+	  <div class="jp-type-playlist">
+	      <div class="jp-gui jp-interface">
+	          <ul class="jp-controls">
+	              <li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
+	              <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+	              <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+	              <li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
+	              <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+	              <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+	              <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+	              <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+	          </ul>
+	          <div class="jp-progress">
+	              <div class="jp-seek-bar">
+	                  <div class="jp-play-bar"></div>
+	              </div>
+	          </div>
+	          <div class="jp-volume-bar">
+	              <div class="jp-volume-bar-value"></div>
+	          </div>
+	          <div class="jp-time-holder">
+	              <div class="jp-current-time"></div>
+	              <div class="jp-duration"></div>
+	          </div>
+	          <ul class="jp-toggles">
+	              <li><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a></li>
+	              <li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a></li>
+	              <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+	              <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+	          </ul>
+	      </div>
+	      <div class="jp-playlist">
+	          <div class="playlist-scroll-pane">
+	              <ul>
+	                  <li></li>
+	              </ul>
+	          </div>
+	      </div>
+	      <div class="jp-no-solution">
+	          <span>Update Required</span>
+	          To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+	      </div>
+	  </div>
+	</div>
+</div>
+			</div>
+
+
+</div>
+</div>	
+</div>
+fin reproductor-->	
+</div>	
+</div>	
+</div>
+
+<div id="slider3_wrapper">
+<div class="container">
+<div class="row">
+<div class="span12">
+<div id="slider3">
+<div class="slider3_txt">Que hay de nuevo</div>	
+<a class="prev3" href="#"></a>
+<a class="next3" href="#"></a>		
+<div class="carousel-box row">
+	<div class="inner span12">			
+		<div class="carousel main">
+			<ul>
+				{% for noticia in noticias %}
+				<li>
+					<div class="banner banner1">
+						<div class="banner_inner">
+							<a href="eventos">
+								<img src="{{ noticia.foto.url }}" alt="" class="img">
+								<div class="txt1">{{ noticia.titulo }}</div>
+								<div class="txt2">{{ noticia.noticia|truncatechars_html:100 }}</div>
+							</a>
+						</div>						
+					</div>
+				</li>
+				{% endfor %}													
+			</ul>
+		</div>
+	</div>
+</div>
+</div>	
+</div>	
+</div>	
+</div>	
+</div>
+
+{% endblock %}
+
+<!--Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam tempore enim debitis qui, distinctio quidem nihil provident consequuntur incidunt, veniam iusto. Labore, sequi suscipit porro ea cumque necessitatibus dolorum nesciunt.  https://www.ratablanca.net/-->

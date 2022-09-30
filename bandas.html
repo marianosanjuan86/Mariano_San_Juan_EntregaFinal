@@ -1,0 +1,90 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+
+
+{% block contenido %}
+
+
+<div id="content">
+<div class="container">
+<div class="row">
+<div class="span8">
+<div class="box2">
+<div class="box2_top">
+	<h1><span>Aguante el Heavy Metal</span></h1>
+</div>	
+<div class="box2_inner">	
+
+<div class="thumb1 last">
+	<div class="thumbnail clearfix">
+		<figure class=""><img src="{% static 'web/images/heavy_metal.png' %}" alt=""></figure>
+		<div class="caption">			
+			<p>
+				<strong>Descubri las bandas que seran parte de nuestro futuro </strong>
+			</p>
+			<p>
+				Todas ellas tienen un mensaje que darte, todas ellas tienen nuevas sensaciones para vos. 
+			</p>
+			<p>
+				Tu apoyo es hacia ellas es importante, ya que en ellas esta el futuro Heavy metal ARGENTO 
+			</p>
+			<div class="ic">
+				<a href="#" class="ic1"><img src="images/ic1.png" alt=""></a>
+				<a href="#" class="ic1"><img src="images/ic2.png" alt=""></a>
+				<a href="#" class="ic1"><img src="images/ic3.png" alt=""></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+</div>
+<div class="box1">
+<div class="box1_top">
+	<h2><span>Conocelos</span></h2>
+</div>	
+<!--Seccion muestra bandas-->
+<div class="box1_inner">	
+	{% for banda in bandas %}
+	<ul class="thumbnails thumbnails3">
+		<li>
+			<div class="thumbnail clearfix">
+				<figure class=""><img src="{{ banda.foto.url }}" alt=""></figure>
+				<div class="caption">	
+				<h3><span>{{ banda.nombre }}</span></h3>																		
+					<p>{{ banda.presentacion|safe|truncatechars_html:180 }} </p>
+					<div class="ic">
+						<a href="#" class="ic1"><img src="{% static 'web/images/ic1.png' %}" alt=""></a>
+						<a href="#" class="ic1"><img src="{% static 'web/images/ic2.png' %}" alt=""></a>
+						<a href="#" class="ic1"><img src="{% static 'web/images/ic3.png' %}" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</li>		
+	</ul>
+	{% endfor %}
+</div>
+<!--termina Seccion muestra bandas-->
+</div>	
+</div>
+<!--comienzo del reproductor-->
+<div class="span4">
+	<div class="box1">
+	<div class="box1_top">
+		<h2><span>Proximamente</span></h2>
+	</div>	
+	<div class="box1_inner">
+		
+	
+	<div class="jplayer_inner">
+		<img src="{% static 'web/images/reproductor.png' %}" alt="">
+	</div>	
+	<!--fin reproductor-->	
+</div>	
+</div>	
+</div>	
+</div>	
+</div>
+
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+
+
+{% block contenido %}
+
+<div id="content">
+<div class="container">
+<div class="row">
+<div class="span8">
+<div class="box2">
+<div class="box2_top">
+	<h1><span>Ultima noticia</span></h1>
+</div>	
+<div class="box2_inner">	
+
+<div class="thumb1 last">
+	<div class="thumbnail clearfix">
+		<figure class=""><img src="{{ ultima_noticia.foto.url }}" alt=""></figure>
+		<div class="caption">
+			<p>{{ ultima_noticia.titulo }}<strong></p>
+			<p>{{ ultima_noticia.noticia }}</p>			
+		</div>
+	</div>
+</div>
+
+</div>
+</div>
+<div class="box1">
+<div class="box1_top">
+	<h2><span>Noticias</span></h2>
+</div>	
+<div class="box1_inner">	
+	{% for noticia in noticias %}
+<div class="thumb2">
+	<div class="thumbnail clearfix">
+		<figure class=""><img src="{{ noticia.foto.url }}" alt=""></figure>
+		<div class="caption">			
+			<p>
+				<strong>{{ noticia.titulo }}</strong>
+			</p>
+			<p> {{ noticia.noticia }} </p>			
+		</div>
+	</div>
+</div>
+{% endfor %}
+</div>
+</div>	
+</div>
+<!--Comienza seccion eventos-->
+<div class="span4">
+<div class="box1">
+<div class="box1_top">
+	<h2><span>EVENTOS PROXIMOS</span></h2>
+</div>
+	{% for evento in eventos %}	
+<div class="box1_inner">
+	
+<h4><a href="#">{{ evento.banda }}</a></h4>
+
+<div class="date1">{{ evento.fecha_evento }} - {{ evento.horario }} Hs</div>
+<div class="date1">{{ evento.lugar }}</div>
+<div class="date1">{{ evento.direccion }}</div>
+
+<p>
+	{{ evento.comentario }}
+</p>
+<div class="ic">
+	<a href="{{ eventos.link_entrada }}" class="ic1">Saca tu entrada ACA!!! </a>
+</div>
+
+<div class="line1"></div>
+
+
+</div>
+	{% endfor %}
+</div>	
+</div>
+<!--termina seccion eventos-->	
+</div>	
+</div>	
+</div>
+
+{% endblock %}
