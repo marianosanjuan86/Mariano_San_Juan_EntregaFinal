@@ -1,0 +1,211 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+
+
+{% block contenido %}
+
+
+
+<div id="content">
+<div class="container">
+<div class="row">
+<div class="span7">
+<div class="box2">
+<div class="box2_top">
+	<h1><span>Best Songs</span></h1>
+</div>	
+<div class="box2_inner">	
+
+<ul class="thumbnails thumbnails1">
+	<li>
+		<div class="thumbnail clearfix">
+			<figure class=""><img src="images/music01.jpg" alt=""></figure>
+			<div class="caption">															
+				<p>
+					Ipsum dolor sit amet 
+				</p>				
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="thumbnail clearfix">
+			<figure class=""><img src="images/music02.jpg" alt=""></figure>
+			<div class="caption">															
+				<p>
+					Conse ctetur adipisi
+				</p>				
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="thumbnail clearfix">
+			<figure class=""><img src="images/music03.jpg" alt=""></figure>
+			<div class="caption">															
+				<p>
+					Sit amet conse ctet
+				</p>				
+			</div>
+		</div>
+	</li>					
+</ul>
+
+</div>
+</div>
+<div class="box1">
+<div class="box1_top">
+	<h2><span>About Our Music</span></h2>
+</div>	
+<div class="box1_inner">	
+
+<p>
+	<strong>Amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </strong>
+</p>
+<p>
+	Nisi ut aliquip ex ea commodo consequat consectetuer adipiscing elit. Nunc suscipit. Suspendisse enim arcu, convallis non, cursus sed, dignissim et, est. Aenean semper aliquet libero. In ante velit, cursus ut, ultrices vitae, tempor ut, risus.<br>
+Duis pulvinar. Vestibulum vel pede at sapien sodales mattis. Quisque pretium, lacus nec iaculis vehicula, arcu libero consectetuer massa, auctor aliquet mauris ligula id ipsum. Vestibulum pede. Maecenas sit amet augue. Sed blandit lect
+</p>
+
+<br>
+
+<ul class="thumbnails thumbnails2">
+	<li>
+		<div class="thumbnail clearfix">
+			<figure class=""><img src="images/music04.jpg" alt=""></figure>
+			<div class="caption">															
+				<p>
+					<strong>Tempor incididunt ut labore et dolore </strong>
+				</p>
+				<p>
+					Ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetuer adipiscing elit. Nunc suscipit. Suspendisse enim arcu, convallis non, cursus sed, dignissim et, est. Aenean semper aliquet libero. In ante velit, cursus ut, ultrices vitae, tempor ut, risus. 
+				</p>
+				<div class="text-right"><a href="#" class="button1">read more</a></div>				
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="thumbnail clearfix">
+			<figure class=""><img src="images/music05.jpg" alt=""></figure>
+			<div class="caption">															
+				<p>
+					<strong>Tempor incididunt ut labore et dolore </strong>
+				</p>
+				<p>
+					Ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetuer adipiscing elit. Nunc suscipit. Suspendisse enim arcu, convallis non, cursus sed, dignissim et, est. Aenean semper aliquet libero. In ante velit, cursus ut, ultrices vitae, tempor ut, risus. 
+				</p>
+				<div class="text-right"><a href="#" class="button1">read more</a></div>				
+			</div>
+		</div>
+	</li>						
+</ul>
+
+
+
+
+
+</div>
+</div>	
+</div>
+<div class="span5">
+<div class="box1">
+<div class="box1_top">
+	<h2><span>Top 10 Songs</span></h2>
+</div>	
+<div class="box1_inner">
+	
+<div class="jplayer_inner">
+				<div class="jplayer">
+	<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+	<div id="jp_container_1" class="jp-audio">
+	  <div class="jp-type-playlist">
+	      <div class="jp-gui jp-interface">
+	          <ul class="jp-controls">
+	              <li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
+	              <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+	              <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+	              <li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
+	              <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+	              <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+	              <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+	              <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+	          </ul>
+	          <div class="jp-progress">
+	              <div class="jp-seek-bar">
+	                  <div class="jp-play-bar"></div>
+	              </div>
+	          </div>
+	          <div class="jp-volume-bar">
+	              <div class="jp-volume-bar-value"></div>
+	          </div>
+	          <div class="jp-time-holder">
+	              <div class="jp-current-time"></div>
+	              <div class="jp-duration"></div>
+	          </div>
+	          <ul class="jp-toggles">
+	              <li><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a></li>
+	              <li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a></li>
+	              <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+	              <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+	          </ul>
+	      </div>
+	      <div class="jp-playlist">
+	          <div class="playlist-scroll-pane">
+	              <ul>
+	                  <li></li>
+	              </ul>
+	          </div>
+	      </div>
+	      <div class="jp-no-solution">
+	          <span>Update Required</span>
+	          To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+	      </div>
+	  </div>
+	</div>
+</div>
+			</div>
+
+
+
+</div>
+</div>
+<div class="box1">
+<div class="box1_top">
+	<h2><span>Usful Info</span></h2>
+</div>	
+<div class="box1_inner">
+	
+<p>
+	<strong>Adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</strong>
+</p>
+<p>
+	Quip ex ea commodo consequat consectetuer adipiscing elit. Nunc suscipit. Suspendisse enim arcu, convallis non, cursus sed, dignissim et, est. Aenean semper aliquet libero. In ante velit, cursus ut, ultrices vitae, tempor ut, risus.<br>
+Duis pulvinar. Vestibulum vel pede at sapien sodales mattis. Quisque pretium, lacus nec iaculis vehicula, arcu libero consectetuer massa, auctor aliquet mauris ligula id ipsum. Vestibulum pede. Maecenas sit amet augue. Sed blandi
+</p>
+
+<ul class="ul1">
+  <li><a href="#">Nunc vel elit sit amet urna</a></li>
+  <li><a href="#">Praesent tincidunt tellus ege</a></li>
+  <li><a href="#">Vestibulum lobortis nisi in</a></li>
+  <li><a href="#">Integer eget lacus ut lacus</a></li>
+  <li><a href="#">Integer gravida augue at tin</a></li>  
+  <li><a href="#">Curabitur viverra libero sit</a></li>            		      	      			                   		      	      			      
+</ul>
+
+<br>
+
+<p>
+	Quip ex ea commodo consequat consectetuer adipiscing elit. Nunc suscipit. Suspendisse enim arcu, convallis non, cursus sed, dignissim et, est. Aenean semper aliquet libero. In ante velit, cursus ut, ultrices vitae, tempor ut, risus.<br>
+Duis pulvinar. Vestibulum vel pede at sapien sodales mattis. Quisque pretium, lacus nec iaculis vehicula, arcu libero consectetuer massa, auctor aliquet mauris ligula id ipsum. Vestibulum pede. Maecenas sit amet augue. Sed blandi
+</p>
+
+<div class="text-right"><a href="#" class="button1">read more</a></div>				
+
+
+</div>
+</div>	
+</div>	
+</div>	
+</div>	
+</div>
+
+{% endblock %}
