@@ -12,3 +12,7 @@ en esta web se puede encontrar informacion de bandas como asi tambien noticias d
 -nuevos lanzamientos de discos
 -fechas
 -informacion que a la banda le parezca relevante
+
+Dejo enlace a youtube del video ya que por el peso del mismo no me dejo subirlo a git
+
+https://youtu.be/MNfhU_N3k5Q
